@@ -33,7 +33,7 @@ CALL kurs_pajak() --//memanggil table
 
 -- SOAL 2.b //Stored procedure akan di roll back dari start transaction
 START TRANSACTION;
-INSERT INTO CALL ksm_kurs_pajak(id_ksm_kurs_pajak, kurs_rate, tgl, curr_id)
+INSERT INTO ksm_kurs_pajak(id_ksm_kurs_pajak, kurs_rate, tgl, curr_id)
 VALUES INTO (" "," "," "," "); -- //isi table ksm_kurs_pajak
 SELECT * FROM ksm_kurs_pajak;
 DELETE FROM ksm_kurs_pajak;
