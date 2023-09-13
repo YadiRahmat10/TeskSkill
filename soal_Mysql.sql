@@ -14,20 +14,20 @@ HAVING productionline >= 23;
 -- SOAL 2.a //Buat stored procedure pada mysql untuk mengekstrak isi dari ksm_kurs_pajak menjadi 1 table kurs pajak 
 
 -- //semua produk
-DELIMITER //
+DELIMITER 
 CREATE PROCEDURE kurs_pajak(id_ksm_kurs_pajak, kurs_rate, tgl, curr_id) --// atau kurs_pajak()
 SELECT * FROM ksm_kurs_pajak;
 END
-//
+
 DELIMITER;
 CALL kurs_pajak() --//memanggil table
 
 -- //ambil 1 produk
-DELIMITER //
+DELIMITER 
 CREATE PROCEDURE kurs_pajak(IN id_ksm_kurs_pajak INT)
 SELECT * FROM ksm_kurs_pajak WHERE id = id_ksm_kurs_pajak;
 END
-//
+
 DELIMITER;
 CALL kurs_pajak() --//memanggil table
 
